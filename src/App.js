@@ -1,9 +1,12 @@
 import React from "react";
-import Dashboard from "./pages/Dashboard";
+import Navbar from "./basecomp/Navbar";
+// import Dropdown from "./basecomp/Dropdown";
+
 function App() {
   return (
     <>
-      <Dashboard />
+      <Navbar />
+      {/* <Dropdown /> */}
     </>
   );
 }
