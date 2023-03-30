@@ -8,7 +8,7 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            <img src="images/chatgit.png" height={90} width={100} />
+            <img src="images/chatgit.png" height={70} width={100} />
           </a>
           <button
             className="navbar-toggler"
@@ -135,7 +135,7 @@ const Navbar = () => {
                 data-bs-auto-close="inside"
                 aria-expanded="false"
               >
-                <img src="./images/images.jpeg" height={50} width={50} />
+                <img src="images/3.jpg" height={50} width={50} />
               </button>
               <ul class="dropdown-menu">
                 <li>
