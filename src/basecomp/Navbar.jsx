@@ -1,6 +1,5 @@
-// import { Dropdown } from "bootstrap";
-// import { Dropdown } from "bootstrap";
 import React from "react";
+
 import "../basecomp/Navbar.css";
 const Navbar = () => {
   return (
@@ -152,7 +151,6 @@ const Navbar = () => {
                     </svg>
                     Dark mode
                   </a>
-                  
                 </li>
                 <li>
                   <a className="dropdown-item" href="#">
