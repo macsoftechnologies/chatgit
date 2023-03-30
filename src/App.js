@@ -1,12 +1,10 @@
 import React from "react";
-import Navbar from "./basecomp/Navbar";
-// import Dropdown from "./basecomp/Dropdown";
-
+import Sidebar from './basecomp/Sidebar'
+// import Sidebar from "./"
 function App() {
   return (
     <>
-      <Navbar />
-      {/* <Dropdown /> */}
+      <Sidebar/>
     </>
   );
 }
