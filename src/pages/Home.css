@@ -1,0 +1,43 @@
+.home{
+    background:url('./bg1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vmin;
+    width: 100vmax;
+  }
+  .Home{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 100px;
+    padding-top: 150px;
+  }
+  .signInbuttons{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 50px;
+    transform: translateX(70%);
+    
+  }
+  
+  .signup{
+    margin: none;
+    border: none;
+    font-size: 20px;
+    font-weight: 900;
+  }
+  .signup:hover{
+    color: #3366FF;
+  }
+  .signIn:hover{
+    color:#3366FF
+  }
+  .signIn{
+    margin: none;
+    border: none;
+    font-size: 20px;
+    font-size: 20px;
+    font-weight: 900;
+  }

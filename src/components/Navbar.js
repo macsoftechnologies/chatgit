@@ -171,12 +171,12 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a className="dropdown-item" href="#">
-                    Menu item
+                    Profile
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="#">
-                    Menu item
+                  Log out
                   </a>
                 </li>
               </ul>
