@@ -2,8 +2,8 @@
   src: url("./robot.svg");
 } */
 
-.container-fluid{
-height: 60px;
+.container-fluid {
+  height: 60px;
 }
 .avatar img {
   border-radius: 200px;
@@ -13,10 +13,15 @@ height: 60px;
 }
 .dropdown {
   position: relative;
-  
 }
-.nav{
+.nav {
   position: relative;
+}
+.navbar {
+  border-bottom: 1px solid #dbeafe;
+}
+.bg-light {
+  background-color: #fff !important;
 }
 .dropdown-menu {
   display: none;
@@ -33,10 +38,30 @@ height: 60px;
   display: block;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  cursor: pointer;
 }
 #light {
   background-color: #f1f1f1;
 }
 #dark {
   background-color: black;
+}
+.nav-link {
+  background-color: #e2e8f0;
+  border-radius: 50%;
+  margin: 5px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+.nav-link svg {
+  height: 20px;
+  width: 20px;
+  color: #334155;
+}
+.active {
+  background-color: #bfdbfe;
+}
+.active svg {
+  color: #2563eb;
 }

@@ -13,14 +13,14 @@ const Dropdown = () => {
   <div>
     <input
       type="checkbox"
-      class="checkbox"
+      className="checkbox"
       id="checkbox"
       onClick={dropdown()}
     />
-    <label for="checkbox" class="label">
-      <i class="fas fa-moon"></i>
-      <i class="fas fa-sun"></i>
-      <div class="ball"></div>
+    <label for="checkbox" className="label">
+      <i className="fas fa-moon"></i>
+      <i className="fas fa-sun"></i>
+      <div className="ball"></div>
     </label>
   </div>;
 };

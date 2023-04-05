@@ -1,33 +1,40 @@
 // <<<<<<< HEAD
-import React, { useState } from "react";
-import Sidebar from './basecomp/Sidebar'
-import Navbar from './basecomp/Navbar'
-// import Sidebar from "./"
-import { createContext } from "react";
-import ReactSwitch from "react-switch";
-import "./basecomp/App.css";
-// import Dropdown from "./basecomp/Dropdown";
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./components/App.css";
+import Layout from "./pages/Layout";
+import Users from "./pages/Users";
+import Dashboard from "./pages/Dashboard";
+import UserChat from "./components/UserChat";
+import ChatLayout from "./pages/ChatLayout";
+import Home from "./pages/Home";
+// import Dropdown from "./components/Dropdown";
 
-export const ThemeContext = createContext(null);
-
+const router = createBrowserRouter([
+  { path: "/", element: <Home /> },
+  {
+    path: "/dashboard",
+    element: <Layout />,
+    children: [
+      {
+        path: "",
+        element: <ChatLayout />,
+        children: [
+          // { path: "", element: <Dashboard /> },
+          { path: ":id", element: <UserChat /> },
+        ],
+      },
+      {
+        path: "users",
+        element: <Users />,
+      },
+    ],
+  },
+]);
 function App() {
-  const [theme, setTheme] = useState("dark");
-  const toggleTheme = () => {
-    setTheme((curr) => (curr === "light" ? "dark" : "light"));
-  };
   return (
     <>
-    <Navbar/>
-      <Sidebar/>
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className="App" id={theme}>
-        <Navbar />
-        <div className="switch">
-          <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
-        </div>
-        {/* <Dropdown /> */}
-      </div>
-    </ThemeContext.Provider>
+      <RouterProvider router={router} />
     </>
   );
 }
