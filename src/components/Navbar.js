@@ -3,9 +3,11 @@ import { Link, NavLink } from "react-router-dom";
 
 import "../components/Navbar.css";
 import { ThemeContext } from "../context/ThemeContextProvider";
+import { MessageContext } from "../context/MessageContextProvider";
 
 const Navbar = () => {
   const themeCntxt = useContext(ThemeContext);
+  const messageContext = useContext(MessageContext);
   return (
     <div>
       <nav
@@ -14,7 +16,7 @@ const Navbar = () => {
         }`}
       >
         <div className="container-fluid">
-          <Link className="navbar-brand" to="">
+          <Link className="navbar-brand" to={messageContext.id}>
             <img src="images/chatgit.png" alt="" height={70} width={100} />
           </Link>
           <button
@@ -34,9 +36,9 @@ const Navbar = () => {
               <li className="nav-item">
                 <NavLink
                   className={({ isActive }) =>
-                    isActive ? "nav-link active" : "nav-link"
+                    isActive ? "navbar nav-link active" : "navbar nav-link"
                   }
-                  to={``}
+                  to={messageContext.id}
                   end
                 >
                   <svg
@@ -56,7 +58,7 @@ const Navbar = () => {
                   className={({ isActive }) =>
                     isActive ? "nav-link active" : "nav-link"
                   }
-                  to="/dashboard/users"
+                  to="users"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -176,7 +178,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a className="dropdown-item" href="#">
-                  Log out
+                    Log out
                   </a>
                 </li>
               </ul>

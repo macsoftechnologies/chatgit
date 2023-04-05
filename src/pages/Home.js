@@ -1,11 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./Home.css";
+import { MessageContext } from "../context/MessageContextProvider";
 
 function Home() {
+  const messageContext = useContext(MessageContext);
+  console.log(messageContext);
+  const navigate = useNavigate();
+  const login = () => {
+    navigate(messageContext.id);
+  };
   return (
     <div className="home">
-      <Link to="/dashboard"></Link>
+      <Link to="dashboard"></Link>
       <link
         href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
         rel="stylesheet"
@@ -68,11 +75,13 @@ function Home() {
                           Remember Me
                         </div> */}
                         <div class="form-group">
-                          <input
+                          <button
                             type="submit"
-                            value="Login"
                             class="btn float-right login_btn"
-                          />
+                            onClick={login}
+                          >
+                            Login
+                          </button>
                         </div>
                       </form>
                     </div>
@@ -117,7 +126,7 @@ function Home() {
                         <div class="input-group form-group">
                           <div class="input-group-prepend">
                             <span class="input-group-text">
-                            <i class="fa-solid fa-envelope"></i>
+                              <i class="fa-solid fa-envelope"></i>
                             </span>
                           </div>
                           <input
@@ -162,8 +171,6 @@ function Home() {
                     </div>
                   </div>
                 </div>
-
-             
               </div>
             </div>
           </div>

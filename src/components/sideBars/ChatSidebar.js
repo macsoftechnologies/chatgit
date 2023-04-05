@@ -5,31 +5,36 @@ import { ThemeContext } from "../../context/ThemeContextProvider";
 // import img from "./images.jpeg";
 import "./Sidebar.css";
 import Service from "../../service";
+import img1 from "../../Assets/img1.jpg";
+import img2 from "../../Assets/img2.jpg";
+import { MessageContext } from "../../context/MessageContextProvider";
 
 const users = [
   {
     id: "1",
     name: "Jasmine Thomson",
     lastMsg: "Had they visited Rome before",
-    url: "assets/img1.jpg",
+    url: img1,
   },
   {
-    id: 2,
+    id: "2",
     name: "Konstantin Frank",
     lastMsg: "Liked that disco music",
-    url: "assets/img2.jpg",
+    url: img2,
   },
   {
-    id: 3,
+    id: "3",
     name: "Gowthami Thapa",
     lastMsg: "Liked that disco music",
-    url: "assets/img1.jpg",
+    url: img1,
   },
 ];
 
 function Sidebar() {
   const themeCntxt = useContext(ThemeContext);
+  const messageContext = useContext(MessageContext);
   const callMe = async (id) => {
+    messageContext.setUserId(id);
     try {
       const response = await Service(
         "POST",
@@ -62,11 +67,10 @@ function Sidebar() {
       {users.map((item) => {
         return (
           <NavLink
-            to={`${item.id}`}
+            to={item.id}
             className={({ isActive }) =>
               isActive ? "link sidebar-active" : "link"
             }
-            end
             key={item.id}
             onClick={() => callMe(item.id)}
           >

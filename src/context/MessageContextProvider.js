@@ -1,11 +1,14 @@
 import React, { createContext, useEffect, useState } from "react";
 import Service from "../service";
 
-export const UserContext = createContext();
+export const MessageContext = createContext();
 function MessageContextProvider({ children }) {
   const [messages, setMessages] = useState([]);
   const [errorMsg, setErrorMsg] = useState("");
-
+  const [id, setId] = useState("1");
+  const setUserId = (id) => {
+    setId(id);
+  };
   const resp = async () => {
     try {
       const data = await Service(
@@ -22,7 +25,9 @@ function MessageContextProvider({ children }) {
     resp();
   }, []);
   return (
-    <UserContext.Provider value={messages}>{children}</UserContext.Provider>
+    <MessageContext.Provider value={{ messages, id, setUserId, errorMsg }}>
+      {children}
+    </MessageContext.Provider>
   );
 }
 
