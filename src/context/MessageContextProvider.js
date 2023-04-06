@@ -16,7 +16,11 @@ function MessageContextProvider({ children }) {
         "https://reactbasic.onrender.com/message/getmessages",
         null
       );
-      setMessages(data.data.data);
+      if (data.status === 200 || data.status === 201) {
+        setMessages(data.data.data);
+      } else {
+        console.log(data.status);
+      }
     } catch (err) {
       setErrorMsg(err.message);
     }

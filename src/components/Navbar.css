@@ -70,7 +70,7 @@
   color: #334155;
 }
 .navbar .active {
-  background-color: #bfdbfe;
+  background-color: #bfdbfe !important;
 }
 .active svg {
   color: #2563eb;

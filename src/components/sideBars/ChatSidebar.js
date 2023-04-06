@@ -5,9 +5,9 @@ import { ThemeContext } from "../../context/ThemeContextProvider";
 // import img from "./images.jpeg";
 import "./Sidebar.css";
 import Service from "../../service";
+import { MessageContext } from "../../context/MessageContextProvider";
 import img1 from "../../Assets/img1.jpg";
 import img2 from "../../Assets/img2.jpg";
-import { MessageContext } from "../../context/MessageContextProvider";
 
 const users = [
   {
@@ -73,6 +73,7 @@ function Sidebar() {
             }
             key={item.id}
             onClick={() => callMe(item.id)}
+            end
           >
             <div className="container chat-container">
               <div className="row p-2">
@@ -128,7 +129,7 @@ function Sidebar() {
                             <i
                               className="fa fa-video-camera"
                               aria-hidden="true"
-                            ></i>{" "}
+                            ></i>
                             &nbsp;Video Call
                           </a>
                         </li>
@@ -150,7 +151,7 @@ function Sidebar() {
                             <i
                               className="fa fa-exclamation-triangle"
                               aria-hidden="true"
-                            ></i>{" "}
+                            ></i>
                             &nbsp;Report
                           </a>
                         </li>
