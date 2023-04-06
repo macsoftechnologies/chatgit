@@ -1,28 +1,205 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import  "./Home.css"
+import "./Home.css";
 
 function Home() {
   return (
     <div className="home">
       <Link to="/dashboard"></Link>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
       <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
         rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+        id="bootstrap-css"
+      />
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous"
       />
-      <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"
-      ></script>
-      <div className="Home container">
-        <h1 className="quote">Chat with Huge Friends, Family, etc..</h1>
-        <div className="signInbuttons">
-          <button className="signup">SignUp</button>
-          <button className="signIn">SignIn</button>
+
+      <div className="container">
+        {/* <h1 className="quote">Chat with Huge Friends, Family, etc..</h1> */}
+        <div className="row">
+          <div className="col-md-6">
+            <div class="tab-content" id="pills-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="pills-home"
+                role="tabpanel"
+                aria-labelledby="pills-home-tab"
+                tabindex="0"
+              >
+                <div class="d-flex justify-content-center h-100">
+                  <div class="card">
+                    <div class="card-header">
+                      <h3>Sign In</h3>
+                    </div>
+                    <div class="card-body">
+                      <form>
+                        <div class="input-group form-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="fas fa-user"></i>
+                            </span>
+                          </div>
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="username"
+                          />
+                        </div>
+                        <div class="input-group form-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="fas fa-key"></i>
+                            </span>
+                          </div>
+                          <input
+                            type="password"
+                            class="form-control"
+                            placeholder="password"
+                          />
+                        </div>
+                        {/* <div class="row align-items-center remember">
+                          <input type="checkbox" />
+                          Remember Me
+                        </div> */}
+                        <div class="form-group">
+                          <input
+                            type="submit"
+                            value="Login"
+                            class="btn float-right login_btn"
+                          />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="card-footer">
+                      {/* <div class="d-flex justify-content-center links">
+                        Don't have an account?<a href="#">Sign Up</a>
+                      </div> */}
+                      {/* <div class="d-flex justify-content-center">
+                        <a href="#">Forgot your password?</a>
+                      </div> */}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-profile"
+                role="tabpanel"
+                aria-labelledby="pills-profile-tab"
+                tabindex="0"
+              >
+                {" "}
+                <div class="d-flex justify-content-center h-100">
+                  <div class="card">
+                    <div class="card-header">
+                      <h3>Sign Up</h3>
+                    </div>
+                    <div class="card-body">
+                      <form>
+                        <div class="input-group form-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="fas fa-user"></i>
+                            </span>
+                          </div>
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="username"
+                          />
+                        </div>
+                        <div class="input-group form-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                            <i class="fa-solid fa-envelope"></i>
+                            </span>
+                          </div>
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Email"
+                          />
+                        </div>
+
+                        <div class="input-group form-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="fas fa-key"></i>
+                            </span>
+                          </div>
+                          <input
+                            type="password"
+                            class="form-control"
+                            placeholder="password"
+                          />
+                        </div>
+                        {/* <div class="row align-items-center remember">
+                          <input type="checkbox" />
+                          Remember Me
+                        </div> */}
+                        <div class="form-group">
+                          <input
+                            type="submit"
+                            value="Register"
+                            class="btn float-right login_btn"
+                          />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="card-footer">
+                      {/* <div class="d-flex justify-content-center links">
+                        Don't have an account?<a href="#">Sign Up</a>
+                      </div> */}
+                      {/* <div class="d-flex justify-content-center">
+                        <a href="#">Forgot your password?</a>
+                      </div> */}
+                    </div>
+                  </div>
+                </div>
+
+             
+              </div>
+            </div>
+          </div>
+
+          <div className="col-md-6">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="pills-home-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-home"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-home"
+                  aria-selected="true"
+                >
+                  sign-in
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pills-profile-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-profile"
+                  aria-selected="false"
+                >
+                  sign-up
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

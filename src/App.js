@@ -8,6 +8,8 @@ import Dashboard from "./pages/Dashboard";
 import UserChat from "./components/UserChat";
 import ChatLayout from "./pages/ChatLayout";
 import Home from "./pages/Home";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
 // import Dropdown from "./components/Dropdown";
 
 const router = createBrowserRouter([
