@@ -70,10 +70,7 @@ function Home() {
                             placeholder="password"
                           />
                         </div>
-                        {/* <div class="row align-items-center remember">
-                          <input type="checkbox" />
-                          Remember Me
-                        </div> */}
+
                         <div class="form-group">
                           <button
                             type="submit"
@@ -85,14 +82,7 @@ function Home() {
                         </div>
                       </form>
                     </div>
-                    <div class="card-footer">
-                      {/* <div class="d-flex justify-content-center links">
-                        Don't have an account?<a href="#">Sign Up</a>
-                      </div> */}
-                      {/* <div class="d-flex justify-content-center">
-                        <a href="#">Forgot your password?</a>
-                      </div> */}
-                    </div>
+                    <div class="card-footer"></div>
                   </div>
                 </div>
               </div>
@@ -148,10 +138,7 @@ function Home() {
                             placeholder="password"
                           />
                         </div>
-                        {/* <div class="row align-items-center remember">
-                          <input type="checkbox" />
-                          Remember Me
-                        </div> */}
+
                         <div class="form-group">
                           <input
                             type="submit"
@@ -161,14 +148,7 @@ function Home() {
                         </div>
                       </form>
                     </div>
-                    <div class="card-footer">
-                      {/* <div class="d-flex justify-content-center links">
-                        Don't have an account?<a href="#">Sign Up</a>
-                      </div> */}
-                      {/* <div class="d-flex justify-content-center">
-                        <a href="#">Forgot your password?</a>
-                      </div> */}
-                    </div>
+                    <div class="card-footer"></div>
                   </div>
                 </div>
               </div>
@@ -206,6 +186,9 @@ function Home() {
                 </button>
               </li>
             </ul>
+            <h1 className="quote">
+              Powerful Messages To Send Your Long Distance Friends
+            </h1>
           </div>
         </div>
       </div>
