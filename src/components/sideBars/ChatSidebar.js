@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { ThemeContext } from "../../context/ThemeContextProvider";
 
 // import img from "./images.jpeg";
 import "./Sidebar.css";
 import Service from "../../service";
 import { MessageContext } from "../../context/MessageContextProvider";
-import img1 from "../../Assets/img1.jpg";
-import img2 from "../../Assets/img2.jpg";
+import img1 from "../../assets/images/img1.jpg";
+import img2 from "../../assets/images/img2.jpg";
 
 const users = [
   {

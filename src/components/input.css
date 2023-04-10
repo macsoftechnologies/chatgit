@@ -1,0 +1,16 @@
+.input .invalid-feedback {
+  display: none;
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+  color: #ff2d06;
+}
+
+input:invalid[focused="true"] {
+  border: 1px solid #ff2d06;
+}
+input:invalid[focused="true"] ~ .invalid-feedback {
+  display: block;
+}
+.input .input-group-text {
+  background-color: lightblue;
+}

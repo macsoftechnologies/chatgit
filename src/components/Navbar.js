@@ -30,12 +30,12 @@ const Navbar = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
+          <div className="collapse navbar-collapse navbarItem" id="navbarNav">
             <ul className="nav">
               <li className="nav-item">
                 <NavLink
                   className={({ isActive }) =>
-                    isActive ? "navbar nav-link active" : "navbar nav-link"
+                    isActive ? "nav-link active" : "nav-link"
                   }
                   to={messageContext.id}
                   end
